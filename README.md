@@ -3,5 +3,5 @@
 ### - Express.js
 ### - Node.js
 ### - MongoDB
-### - QraphQL
+### - GraphQL
 ### - Apollo
