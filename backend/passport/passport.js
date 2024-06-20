@@ -15,8 +15,8 @@ export const configurePassport = () => {
         try {
             const user = User.findById(id)
             done(null, user);
-        } catch (error) {
-            done(error);
+        } catch (e) {
+            done(e);
         }
     })
 
@@ -32,8 +32,8 @@ export const configurePassport = () => {
                     throw new Error("Invalid password");
                 }
                 done(null, user);
-            } catch (error) {
-                done(error);
+            } catch (e) {
+                done(e);
             }
         }
     ))

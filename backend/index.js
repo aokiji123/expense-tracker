@@ -29,8 +29,8 @@ const store = new MongoDBStore({
     collection: "sessions",
 });
 
-store.on("error", function (error) {
-    console.log(error);
+store.on("error", function (e) {
+    console.error(e);
 })
 
 app.use(
