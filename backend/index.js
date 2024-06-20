@@ -5,6 +5,7 @@ import express from "express";
 import cors from "cors";
 import http from "http";
 import dotenv from "dotenv";
+import connectDb from "./db/connectDB.js";
 
 import mergedTypeDefs from "./typeDefs/index.js";
 import mergedResolvers from "./resolvers/index.js";
@@ -31,5 +32,6 @@ app.use(
 );
 
 await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
+await connectDb();
 
 console.log(`🚀 Server ready at http://localhost:4000/`);
